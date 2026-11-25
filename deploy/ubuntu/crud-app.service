@@ -1,0 +1,23 @@
+[Unit]
+Description=GestionInventario - Spring Boot (Java 21)
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=simple
+User=springboot
+Group=springboot
+WorkingDirectory=/opt/crud-app
+EnvironmentFile=/etc/crud-app.env
+Environment=PORT=8080
+ExecStart=/usr/bin/java -Xms128m -Xmx512m -jar /opt/crud-app/app.jar
+SuccessExitStatus=143
+Restart=always
+RestartSec=10
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=full
+ProtectHome=true
+
+[Install]
+WantedBy=multi-user.target

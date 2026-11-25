@@ -1,0 +1,35 @@
+### Estado de la aplicacion
+GET http://localhost:8080/health
+
+### Listar productos
+GET http://localhost:8080/api/productos
+
+### Crear un producto
+POST http://localhost:8080/api/productos
+Content-Type: application/json
+
+{
+  "nombre": "Teclado mecanico",
+  "descripcion": "Conectividad USB",
+  "precio": 35.50,
+  "stock": 12,
+  "categoria": "Accesorios"
+}
+
+### Consultar producto (cambie el ID)
+GET http://localhost:8080/api/productos/1
+
+### Actualizar producto (cambie el ID)
+PUT http://localhost:8080/api/productos/1
+Content-Type: application/json
+
+{
+  "nombre": "Teclado mecanico RGB",
+  "descripcion": "Version actualizada",
+  "precio": 42.75,
+  "stock": 8,
+  "categoria": "Accesorios"
+}
+
+### Eliminar producto (cambie el ID)
+DELETE http://localhost:8080/api/productos/1

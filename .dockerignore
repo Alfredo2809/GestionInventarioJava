@@ -1,0 +1,14 @@
+.git
+.gitignore
+.idea
+.gradle
+.gradle-local
+build
+out
+.env
+.env.*
+!.env.example
+*.iml
+*.log
+*.zip
+__pycache__
