@@ -1,0 +1,15 @@
+.gradle/
+.gradle-local/
+build/
+out/
+.idea/
+*.iml
+*.log
+.env
+.env.*
+!.env.example
+**/application-local.properties
+*.pem
+*.p12
+*.key
+*.zip
