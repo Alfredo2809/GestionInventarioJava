@@ -6,7 +6,7 @@ ARG GRADLE_VERSION=9.2.1
 RUN curl -fsSL "https://services.gradle.org/distributions/gradle-${GRADLE_VERSION}-bin.zip" -o /tmp/gradle.zip \
     && unzip -q /tmp/gradle.zip -d /opt \
     && rm /tmp/gradle.zip
-ENV PATH="/opt/gradle/gradle-${GRADLE_VERSION}/bin:${PATH}"
+ENV PATH="/opt/gradle-${GRADLE_VERSION}/bin:${PATH}"
 WORKDIR /app
 COPY . .
 RUN gradle --no-daemon clean bootJar
